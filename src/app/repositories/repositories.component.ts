@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef } from '@angular/core';
 import data from '../../data.json';
 
 @Component({
@@ -9,9 +9,13 @@ import data from '../../data.json';
 export class RepositoriesComponent implements OnInit {
 
   users = data.users;
-  constructor() {}
+  constructor(private elementRef: ElementRef) {}
 
   ngOnInit() {
   }
+
+  ngAfterViewInit(){
+    this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#69652B';
+ }
 
 }
