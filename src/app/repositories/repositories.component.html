@@ -1,0 +1,15 @@
+<div class=header>
+  <h2>Repositories</h2>
+</div>
+<div class="container">  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div *ngFor="let user of users">
+
+  <div class="card">
+    <img src= "{{user.avatar_url}}" onError="this.src='assets/default.jpg';" alt="image" style="width:100%">
+    <h1>{{user.name}}</h1>
+    <h3>{{user.nickName}}</h3>
+    <a href={{user.github_url}}>Repository link</a>
+  </div>
+</div>
+
+</div>
